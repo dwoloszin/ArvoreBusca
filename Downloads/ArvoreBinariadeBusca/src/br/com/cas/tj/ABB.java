@@ -117,9 +117,34 @@ public class ABB {
         return no.getValor() + getSomaAux(no.getEsq()) + getSomaAux(no.getDir());
     }
     
-    public void remove (int valor) {
-        
+   public void removerValor (Integer valor) {
+       if (raiz == null)
+           return;
+       if(raiz.getValor() == valor){
+           if(raiz.getDir() == null && raiz.getEsq() == null){
+               raiz = null;
+               return;
+           }
+           if(raiz.getDir() == null && raiz.getEsq() != null){
+           }
+       }  
     }
+   
+   public void removerValorAux(Integer valor, Node node){
+
+   }
+    
+   
+        
+    
+
+    
+    
+
+   
+    
+    
+    
             
             
             
