@@ -118,14 +118,27 @@ public class ABB {
     }
     
    public void removerValor (Integer valor) {
+       //raiz e nula? SIM retorna
        if (raiz == null)
            return;
+       //raiz e o valor que procuro? SIM raiz tem o filhos nulo SIM raiz para nulo, retorna
        if(raiz.getValor() == valor){
            if(raiz.getDir() == null && raiz.getEsq() == null){
                raiz = null;
                return;
            }
+           //raiz e o valor que eu quero? SIM, raiz possui só um filho... promove o filho
            if(raiz.getDir() == null && raiz.getEsq() != null){
+               this.raiz = raiz.getEsq();
+               return;
+           }else{
+               this.raiz = raiz.getDir();
+               return;
+           }
+           
+           //raiz possui 2 filohs
+           
+           
            }
        }  
     }
